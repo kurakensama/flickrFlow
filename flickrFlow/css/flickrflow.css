@@ -1,0 +1,101 @@
+@import url("../../../../css/common.css");
+
+
+.flickrflow-container{
+    top: 50%;
+    max-width: 100!important;
+    width: 50%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    overflow: visible;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.flickrflow{
+    position: relative;
+    left: calc(50% - 50px);
+    top: 50%;
+    margin-top: 100px;
+    transform-style: preserve-3d;
+    perspective: 800px;
+    cursor: pointer;
+    width: min-content;
+}
+
+.flickrflow-item{
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    backface-visibility: visible;
+    cursor: pointer;
+    transform-style: preserve-3d;
+  }
+
+  .flickrflow-item-content{
+    transform-origin: 50% 50%;
+    backface-visibility: visible;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    background-color: #111;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 1.25s all cubic-bezier(.17, .75, .58, .95);
+    -webkit-box-shadow: 0px 10px 27px -1px rgba(0,0,0,0.7);
+    -moz-box-shadow: 0px 10px 27px -1px rgba(0,0,0,0.7);
+    box-shadow: 0px 10px 27px -1px rgba(0,0,0,0.7);
+  }
+
+  @media only screen and (max-width: 1023px) {
+    .flickrflow-container{
+      height: 240px;
+    }
+
+    .flickrflow-item-content{
+      scale: 0.8;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+
+    .flickrflow-item-content{
+      scale: 0.7;
+    }
+  }
+
+/**
+ * Menú se vuelve vertical
+ *
+ */
+
+@media (max-width : 640px) {
+
+  .flickrflow-container{
+    width: 35%;
+  }
+
+  .flickrflow-item-content{
+    scale: 0.6;
+  }
+}
+
+    /**
+   * cel
+   */
+   @media (max-width : 400px) {
+    
+    .flickrflow-container{
+      width: 10%;
+    }
+
+    .flickrflow-item-content{
+      scale: 0.5;
+    }
+  }
+
+
